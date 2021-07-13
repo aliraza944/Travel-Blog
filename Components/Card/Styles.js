@@ -8,6 +8,7 @@ const useStyles = makeStyles({
     flexDirection: "column",
     justifyContent: "center",
     alignItems: "flex-start",
+    boxShadow: "none",
   },
   media: {
     width: "100%",
