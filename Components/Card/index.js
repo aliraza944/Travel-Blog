@@ -25,9 +25,15 @@ export default function ContentCard(props) {
         </div>
       </CardContent>
       <div className={classes.tagesandtitles}>
-        <Typography variant="h6"> my journey</Typography>
+        <Typography className={classes.bottomTag} variant="h3">
+          {" "}
+          my journey
+        </Typography>
 
-        <Typography variant="h3"> The journey so far </Typography>
+        <Typography className={classes.bottomTitle} variant="h3">
+          {" "}
+          The journey so far{" "}
+        </Typography>
       </div>
     </Card>
   );

@@ -12,6 +12,7 @@ const useStyles = makeStyles({
   },
   media: {
     width: "100%",
+    marginRight: "10px",
   },
   content: {
     width: "100%",
@@ -23,7 +24,18 @@ const useStyles = makeStyles({
     justifyContent: "space-between",
   },
   sideTitle: {
+    fontSize: "1em",
+    letterSpacing: "2.2px",
+    textTransform: "uppercase",
+  },
+  bottomTag: {
     fontSize: "1.2em",
+    color: "#222",
+    textTransform: "uppercase",
+  },
+  bottomTitle: {
+    fontSize: "1.8em",
+    textTransform: "capitalize",
   },
 });
 export default useStyles;
