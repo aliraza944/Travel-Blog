@@ -9,13 +9,30 @@ const FeaturedSection = () => {
   return (
     <>
       <div className={classes.featuredContainer}>
-        <Typography> Featured Story</Typography>
+        <Typography className={classes.featuredText}>
+          {" "}
+          Featured Story
+        </Typography>
 
         <Grid container spacing={4}>
           <Grid item xs={12} md={6}>
             <Card />
           </Grid>
           <Grid item xs={12} md={6}>
+            <Card />
+          </Grid>
+        </Grid>
+      </div>
+      <div className={classes.secondGrid}>
+        {" "}
+        <Grid container>
+          <Grid item xs={12} md={4}>
+            <Card />
+          </Grid>
+          <Grid item xs={12} md={4}>
+            <Card />
+          </Grid>
+          <Grid item xs={12} md={4}>
             <Card />
           </Grid>
         </Grid>

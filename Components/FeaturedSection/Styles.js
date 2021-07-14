@@ -12,5 +12,19 @@ const useStyles = makeStyles((theme) => ({
       flexDirection: "column",
     },
   },
+  featuredText: {
+    writingMode: "vertical-rl",
+    margin: "0 0 0 2em",
+    textAlign: "center",
+    [theme.breakpoints.down("md")]: {
+      writingMode: "horizontal-tb",
+      width: "100%",
+      margin: "0 0 0 0em",
+    },
+  },
+  secondGrid: {
+    margin: "100px 10px",
+    padding: "0px 20px",
+  },
 }));
 export default useStyles;

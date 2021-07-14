@@ -13,7 +13,7 @@ export default function ContentCard(props) {
         <div className={classes.media}>
           <Image layout="responsive" src={Trees}></Image>
         </div>
-        <div>
+        <div className={classes.sideTitleContainer}>
           {" "}
           <Typography className={classes.sideTitle}>
             {" "}

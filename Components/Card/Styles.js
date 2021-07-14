@@ -27,31 +27,45 @@ const useStyles = makeStyles((theme) => ({
     alignItems: "baseline",
     justifyContent: "space-between",
   },
+
+  sideTitleContainer: {
+    textAlign: "center",
+    width: "100%",
+    [theme.breakpoints.up("md")]: {
+      textAlign: "center",
+      width: "fit-content",
+    },
+  },
   sideTitle: {
     fontSize: "1em",
     letterSpacing: "2.2px",
     textTransform: "uppercase",
     writingMode: "horizontal-tb",
+    width: "100%",
+    textAlign: "center",
 
     [theme.breakpoints.up("md")]: {
       writingMode: "vertical-rl",
       textAlign: "center",
+      width: "fit-content",
     },
   },
   bottomTag: {
     fontSize: "1.2em",
     color: "#2222229e",
     textTransform: "uppercase",
-    [theme.breakpoints.up("md")]: {
-      textAlign: "center",
-    },
   },
   bottomTitle: {
     fontSize: "1.8em",
     textTransform: "capitalize",
     color: "#000",
+  },
+  tagesandtitles: {
+    width: "100%",
+    textAlign: "center",
+
     [theme.breakpoints.up("md")]: {
-      textAlign: "center",
+      textAlign: "left",
     },
   },
 }));
