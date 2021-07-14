@@ -1,14 +1,10 @@
 import { Typography } from "@material-ui/core";
-import Head from "next/head";
 import ContentCard from "../Components/Card";
+import Header from "../Components/Header";
 export default function Home() {
   return (
     <div>
-      <Head>
-        <title>Another Escape</title>
-        <meta name="description" content="A traveling blog" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+      <Header />
 
       <main>
         <ContentCard />

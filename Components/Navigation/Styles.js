@@ -22,10 +22,16 @@ const useStyles = makeStyles((theme) => ({
   },
   navItems: {
     display: "none",
-    width: "40%",
+    width: "30%",
+    textAlign: "center",
+    textTransform: "capitalize",
+    fontFamily: "Gordita",
+    fontSize: "1.5em",
+    letterSpacing: "1px",
     [theme.breakpoints.up("md")]: {
       display: "flex",
       justifyContent: "space-between",
+      alignItems: "center",
     },
   },
   searchIcon: {

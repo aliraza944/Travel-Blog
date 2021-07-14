@@ -30,12 +30,13 @@ const useStyles = makeStyles({
   },
   bottomTag: {
     fontSize: "1.2em",
-    color: "#222",
+    color: "#2222229e",
     textTransform: "uppercase",
   },
   bottomTitle: {
     fontSize: "1.8em",
     textTransform: "capitalize",
+    color: "#000",
   },
 });
 export default useStyles;

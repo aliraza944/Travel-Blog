@@ -15,18 +15,10 @@ function Elements({ mobile }) {
     <>
       {mobile && <Divider style={{ margin: "40px 0 10px 0" }} />}
       <div className={mobile ? classes.drawer : classes.navItems}>
-        <Typography variant="h6" noWrap>
-          Featured
-        </Typography>
-        <Typography variant="h6" noWrap>
-          Blog
-        </Typography>
-        <Typography variant="h6" noWrap>
-          About us
-        </Typography>
-        <Typography variant="h6" noWrap>
-          Contact us
-        </Typography>
+        <Typography noWrap>Featured Stories</Typography>
+        <Typography noWrap>Journal</Typography>
+        <Typography noWrap>Volumes</Typography>
+        <Typography noWrap>About us</Typography>
       </div>
     </>
   );
