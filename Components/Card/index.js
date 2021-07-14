@@ -15,22 +15,16 @@ export default function ContentCard(props) {
         </div>
         <div>
           {" "}
-          <Typography
-            variant="h3"
-            className={`${classes.sideTitle} verticleText`}
-          >
+          <Typography className={classes.sideTitle}>
             {" "}
             Trees are monago
           </Typography>
         </div>
       </CardContent>
       <div className={classes.tagesandtitles}>
-        <Typography className={classes.bottomTag} variant="h3">
-          {" "}
-          my journey
-        </Typography>
+        <Typography className={classes.bottomTag}> my journey</Typography>
 
-        <Typography className={classes.bottomTitle} variant="h3">
+        <Typography className={classes.bottomTitle}>
           {" "}
           The journey so far{" "}
         </Typography>

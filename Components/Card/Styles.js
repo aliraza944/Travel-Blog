@@ -1,9 +1,9 @@
 import { makeStyles } from "@material-ui/core/styles";
-const useStyles = makeStyles({
+const useStyles = makeStyles((theme) => ({
   root: {
     minWidth: 275,
     margin: "0",
-    width: "40%",
+    width: "100%",
     display: "flex",
     flexDirection: "column",
     justifyContent: "center",
@@ -17,8 +17,12 @@ const useStyles = makeStyles({
   content: {
     width: "100%",
     display: "flex",
-    flexDirection: "row",
     padding: "0px ",
+    flexDirection: "column",
+
+    [theme.breakpoints.up("md")]: {
+      flexDirection: "row",
+    },
 
     alignItems: "baseline",
     justifyContent: "space-between",
@@ -27,16 +31,28 @@ const useStyles = makeStyles({
     fontSize: "1em",
     letterSpacing: "2.2px",
     textTransform: "uppercase",
+    writingMode: "horizontal-tb",
+
+    [theme.breakpoints.up("md")]: {
+      writingMode: "vertical-rl",
+      textAlign: "center",
+    },
   },
   bottomTag: {
     fontSize: "1.2em",
     color: "#2222229e",
     textTransform: "uppercase",
+    [theme.breakpoints.up("md")]: {
+      textAlign: "center",
+    },
   },
   bottomTitle: {
     fontSize: "1.8em",
     textTransform: "capitalize",
     color: "#000",
+    [theme.breakpoints.up("md")]: {
+      textAlign: "center",
+    },
   },
-});
+}));
 export default useStyles;

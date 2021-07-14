@@ -6,10 +6,12 @@ const theme = createTheme({
     MuiCssBaseline: {
       "@global": {
         "*": {
-          overflow: "hidden",
+          // overflowX: "hidden",
+          boxSizing: "border-box",
         },
         body: {
           fontFamily: "Gorditas ,Helvetica Neue,sans-serif",
+          backgroundColor: "white",
         },
         ".responsiveImage": {
           width: "100%",

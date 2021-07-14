@@ -7,6 +7,8 @@ const useStyles = makeStyles((theme) => ({
     padding: "20px 0 20px 0",
     color: "black",
     backgroundColor: "white",
+    alignItems: "center",
+    justifyContent: "space-around",
   },
 
   appbar: {
@@ -48,7 +50,7 @@ const useStyles = makeStyles((theme) => ({
   menuButton: {
     justifyContent: "flex-start",
     marginRight: theme.spacing(0),
-    flexGrow: 1,
+    flexGrow: 0,
     fontSize: "1.5em",
 
     [theme.breakpoints.up("md")]: {
