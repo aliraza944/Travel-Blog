@@ -14,8 +14,10 @@ const theme = createTheme({
           backgroundColor: "white",
         },
         ".responsiveImage": {
-          width: "100%",
-          height: "auto",
+          width: "100% !important",
+          height: "auto important",
+          objectFit: "contain",
+          position: "relative !important",
         },
         ".verticleText": {
           writingMode: "vertical-rl",

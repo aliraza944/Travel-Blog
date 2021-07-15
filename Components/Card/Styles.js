@@ -14,6 +14,11 @@ const useStyles = makeStyles((theme) => ({
     width: "100%",
     marginRight: "10px",
   },
+  responsiveImage: {
+    width: "100% !important",
+    height: "100% !important ",
+    objectFit: "contain",
+  },
   content: {
     width: "100%",
     display: "flex",

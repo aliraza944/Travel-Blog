@@ -1,10 +1,18 @@
 import Card from "../Card";
-import Paper from "@material-ui/core/Paper";
+
 import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
 import useStyles from "./Styles";
 
-const FeaturedSection = () => {
+function FeaturedSection({ data }) {
+  const herodata = data.filter(
+    (obj) =>
+      obj.frontMatter.type === "featured" && obj.frontMatter.isHero === true
+  );
+  const nonherodata = data.filter(
+    (obj) =>
+      obj.frontMatter.type === "featured" && obj.frontMatter.isHero === false
+  );
   const classes = useStyles();
   return (
     <>
@@ -15,30 +23,38 @@ const FeaturedSection = () => {
         </Typography>
 
         <Grid container spacing={4}>
-          <Grid item xs={12} md={6}>
-            <Card />
-          </Grid>
-          <Grid item xs={12} md={6}>
-            <Card />
-          </Grid>
+          {herodata.map((data) => {
+            return (
+              <Grid key={data.slug} item xs={12} md={6}>
+                <Card
+                  sideTitle={data.frontMatter.sideTitle}
+                  imgsrc={data.frontMatter.thumbnailImage}
+                  bottomTitle={data.frontMatter.title}
+                />
+              </Grid>
+            );
+          })}
         </Grid>
       </div>
       <div className={classes.secondGrid}>
         {" "}
-        <Grid container>
-          <Grid item xs={12} md={4}>
-            <Card />
-          </Grid>
-          <Grid item xs={12} md={4}>
-            <Card />
-          </Grid>
-          <Grid item xs={12} md={4}>
-            <Card />
-          </Grid>
+        <Grid container spacing={2}>
+          {nonherodata.map((data) => {
+            return (
+              <Grid key={data.slug} item xs={12} md={4}>
+                <Card
+                  sideTitle={data.frontMatter.sideTitle}
+                  imgsrc={data.frontMatter.thumbnailImage}
+                  bottomTitle={data.frontMatter.title}
+                  featured
+                />
+              </Grid>
+            );
+          })}
         </Grid>
       </div>
     </>
   );
-};
+}
 
 export default FeaturedSection;

@@ -1,23 +1,25 @@
-import { Typography } from "@material-ui/core";
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
+
+import { Typography } from "@material-ui/core";
+
 import Header from "../Components/Header";
 import FeaturedSection from "../Components/FeaturedSection";
-export default function Home() {
+export default function Home({ posts }) {
   return (
     <div>
       <Header />
 
       <main>
-        <FeaturedSection />
+        <FeaturedSection data={posts} />
       </main>
     </div>
   );
 }
 
 export async function getStaticProps() {
-  const files = fs.readdirSync(path.join("posts"));
+  const files = fs.readdirSync(path.join(process.cwd(), "posts"));
 
   const posts = files.map((file) => {
     // creating a uniques slug for each file
@@ -25,7 +27,10 @@ export async function getStaticProps() {
 
     // creating frontMatter
 
-    const mdWithMeta = fs.readFileSync(path.join("posts", file), "utf-8");
+    const mdWithMeta = fs.readFileSync(
+      path.join(process.cwd(), "posts", file),
+      "utf-8"
+    );
 
     const { data: frontMatter } = matter(mdWithMeta);
 
@@ -38,7 +43,7 @@ export async function getStaticProps() {
   console.log(posts);
   return {
     props: {
-      post: "my post",
+      posts,
     },
   };
 }
