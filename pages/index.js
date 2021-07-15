@@ -12,7 +12,16 @@ export default function Home({ posts }) {
       <Header />
 
       <main>
-        <FeaturedSection data={posts} />
+        <FeaturedSection
+          data={posts}
+          type="featured"
+          buttonText="featured stories"
+        />
+        <FeaturedSection
+          data={posts}
+          type="journal"
+          buttonText="journal articles"
+        />
       </main>
     </div>
   );

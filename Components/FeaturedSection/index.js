@@ -4,32 +4,34 @@ import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
 import useStyles from "./Styles";
 import Button from "../StyledButton";
-function FeaturedSection({ data }) {
+function FeaturedSection({ data, type, buttonText }) {
   const herodata = data.filter(
-    (obj) =>
-      obj.frontMatter.type === "featured" && obj.frontMatter.isHero === true
+    (obj) => obj.frontMatter.type === type && obj.frontMatter.isHero === true
   );
   const nonherodata = data.filter(
-    (obj) =>
-      obj.frontMatter.type === "featured" && obj.frontMatter.isHero === false
+    (obj) => obj.frontMatter.type === type && obj.frontMatter.isHero === false
   );
   const classes = useStyles();
   return (
     <>
       <div className={classes.featuredContainer}>
-        <Typography className={classes.featuredText}>
-          {" "}
-          Featured Story
-        </Typography>
+        <Typography className={classes.featuredText}> {type}</Typography>
 
-        <Grid container spacing={4}>
+        <Grid container spacing={2}>
           {herodata.map((data) => {
             return (
-              <Grid key={data.slug} item xs={12} md={6}>
+              <Grid
+                key={data.slug}
+                item
+                xs={12}
+                md={type === "featured" ? 6 : 3}
+              >
                 <Card
                   sideTitle={data.frontMatter.sideTitle}
                   imgsrc={data.frontMatter.thumbnailImage}
                   bottomTitle={data.frontMatter.title}
+                  bottomTag={data.frontMatter.bottomTag}
+                  featured={type === "journal" && true}
                 />
               </Grid>
             );
@@ -41,11 +43,17 @@ function FeaturedSection({ data }) {
         <Grid container spacing={2}>
           {nonherodata.map((data) => {
             return (
-              <Grid key={data.slug} item xs={12} md={4}>
+              <Grid
+                key={data.slug}
+                item
+                xs={12}
+                md={type === "featured" ? 4 : 3}
+              >
                 <Card
                   sideTitle={data.frontMatter.sideTitle}
                   imgsrc={data.frontMatter.thumbnailImage}
                   bottomTitle={data.frontMatter.title}
+                  bottomTag={data.frontMatter.bottomTag}
                   featured
                 />
               </Grid>
@@ -53,7 +61,7 @@ function FeaturedSection({ data }) {
           })}
         </Grid>
         <div>
-          <Button title=" view all featured stories" />
+          <Button title={`view all ${buttonText}`} />
         </div>
       </div>
     </>

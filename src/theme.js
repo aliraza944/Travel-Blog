@@ -11,7 +11,7 @@ const theme = createTheme({
         },
         body: {
           fontFamily: "Gorditas ,Helvetica Neue,sans-serif",
-          backgroundColor: "white",
+          backgroundColor: "whitesmoke",
         },
         ".responsiveImage": {
           width: "100% !important",

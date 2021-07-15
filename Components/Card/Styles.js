@@ -9,6 +9,7 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: "center",
     alignItems: "flex-start",
     boxShadow: "none",
+    backgroundColor: "transparent",
   },
   media: {
     width: "100%",

@@ -1,7 +1,7 @@
 import Button from "@material-ui/core/Button";
 import { makeStyles } from "@material-ui/core";
 
-const useStyles = makeStyles({
+const useStyles = makeStyles((theme) => ({
   root: {
     backgroundColor: "transparent",
     border: "1px solid #747474",
@@ -18,7 +18,7 @@ const useStyles = makeStyles({
       color: "white",
     },
   },
-});
+}));
 
 const StyledButton = (props) => {
   const classes = useStyles();
