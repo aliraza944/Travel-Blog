@@ -3,6 +3,7 @@ import { Grid, Typography } from "@material-ui/core";
 import Image from "next/image";
 
 import featuredProduct from "../../public/Images/featuredProduct.jpg";
+import ProductCard from "../ProductCard";
 const Shop = () => {
   const classes = useStyles();
   return (
@@ -23,7 +24,7 @@ const Shop = () => {
               <Typography className={classes.featuredTitle}>
                 The Beloging Volume
               </Typography>
-              <Typography className={classes.feaaturedDescription}>
+              <Typography className={classes.featuredDescription}>
                 Nature is our home. Our biotic community comprises a wealth of
                 species all interconnected and interdependent on one another,
                 flourishing in a rich tapestry of life that spans the planet.
@@ -34,6 +35,7 @@ const Shop = () => {
           </Grid>
         </Grid>
       </div>
+      <ProductCard />
     </div>
   );
 };

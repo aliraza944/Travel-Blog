@@ -29,9 +29,10 @@ const useStyles = makeStyles((theme) => ({
   },
   productContent: {
     textAlign: "left",
-
-    "& > *": {
-      margin: "0px 0 20px 40px ",
+    margin: "0 0 0 40px",
+    [theme.breakpoints.down("md")]: {
+      textAlign: "center",
+      margin: "0 0 0 0px",
     },
   },
   featuredVolume: {
@@ -52,6 +53,11 @@ const useStyles = makeStyles((theme) => ({
     letterSpacing: "0.08em",
     fontSize: "1.2em",
     fontWeight: 400,
+    width: "60%",
+    [theme.breakpoints.down("md")]: {
+      textAlign: "center",
+      width: "100%",
+    },
   },
 }));
 
