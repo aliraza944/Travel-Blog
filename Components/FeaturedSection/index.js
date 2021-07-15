@@ -3,7 +3,7 @@ import Card from "../Card";
 import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
 import useStyles from "./Styles";
-
+import Button from "../StyledButton";
 function FeaturedSection({ data }) {
   const herodata = data.filter(
     (obj) =>
@@ -52,6 +52,9 @@ function FeaturedSection({ data }) {
             );
           })}
         </Grid>
+        <div>
+          <Button title=" view all featured stories" />
+        </div>
       </div>
     </>
   );
