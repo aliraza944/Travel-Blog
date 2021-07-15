@@ -1,7 +1,7 @@
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
-
+import Shop from "../Components/Shop";
 import { Typography } from "@material-ui/core";
 
 import Header from "../Components/Header";
@@ -22,6 +22,7 @@ export default function Home({ posts }) {
           type="journal"
           buttonText="journal articles"
         />
+        <Shop />
       </main>
     </div>
   );
@@ -49,7 +50,6 @@ export async function getStaticProps() {
     };
   });
 
-  console.log(posts);
   return {
     props: {
       posts,
