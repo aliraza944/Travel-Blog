@@ -5,6 +5,7 @@ import { ThemeProvider } from "@material-ui/core/styles";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import theme from "../src/theme";
 import Navigation from "../Components/Navigation";
+import Footer from "../Components/Footer";
 export default function MyApp(props) {
   const { Component, pageProps } = props;
 
@@ -30,6 +31,7 @@ export default function MyApp(props) {
         <CssBaseline />
         <Navigation> </Navigation>
         <Component {...pageProps} />
+        <Footer></Footer>
       </ThemeProvider>
     </React.Fragment>
   );
