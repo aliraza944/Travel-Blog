@@ -2,7 +2,7 @@ import { makeStyles } from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    width: "40%",
+    width: "100%",
     margin: "100px 0 0 0",
     backgroundColor: "#eee",
     boxShadow: "none",
@@ -12,6 +12,7 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     justifyContent: "flex-start",
     flexDirection: "column",
+    padding: "16px 25px",
   },
   featuredVolume: {
     color: "#4d4d4d",
