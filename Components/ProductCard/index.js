@@ -30,10 +30,10 @@ const ProductCard = () => {
   const classes = useStyles();
   return (
     <>
-      <Grid container>
+      <Grid container style={{ marginTop: "40px" }}>
         {products.map((product) => {
           return (
-            <Grid item xs={12} md={4}>
+            <Grid item xs={12} md={4} key={product.title}>
               <Card className={classes.root}>
                 <CardMedia className={classes.media}>
                   <Image

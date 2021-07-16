@@ -12,11 +12,28 @@ const Shop = () => {
         <span>shop</span>
       </div>
       <div className={classes.featuredProductGrid}>
-        <Grid container spacing={4} justifyContent="center" alignItems="center">
-          <Grid item xs={12} md={6} style={{ display: "contents" }}>
-            <Image src={featuredProduct} />
+        <Grid
+          container
+          spacing={4}
+          justifyContent="space-around"
+          alignItems="center"
+        >
+          <Grid item xs={12} md={6} className={classes.gridImageItem}>
+            <div className={classes.featuredProductGridImage}>
+              <Image
+                layout="responsive"
+                width={300}
+                height={400}
+                src={featuredProduct}
+              />
+            </div>
           </Grid>
-          <Grid item xs={12} md={6}>
+          <Grid
+            item
+            xs={12}
+            md={6}
+            style={{ display: "flex", justifyContent: "flex-start" }}
+          >
             <div className={classes.productContent}>
               <Typography className={classes.featuredVolume}>
                 Volume thirteen

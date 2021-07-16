@@ -15,11 +15,7 @@ const useStyles = makeStyles((theme) => ({
     width: "100%",
     marginRight: "10px",
   },
-  responsiveImage: {
-    width: "100% !important",
-    height: "100% !important ",
-    objectFit: "contain",
-  },
+
   content: {
     width: "100%",
     display: "flex",
@@ -49,7 +45,7 @@ const useStyles = makeStyles((theme) => ({
     writingMode: "horizontal-tb",
     width: "100%",
     textAlign: "center",
-
+    margin: "20px 0 0 0",
     [theme.breakpoints.up("md")]: {
       writingMode: "vertical-rl",
       textAlign: "center",
@@ -60,11 +56,18 @@ const useStyles = makeStyles((theme) => ({
     fontSize: "1.2em",
     color: "#2222229e",
     textTransform: "uppercase",
+    margin: "20px 0",
   },
   bottomTitle: {
     fontSize: "1.8em",
     textTransform: "capitalize",
     color: "#000",
+    fontWeight: 500,
+    margin: "0 0 50px 0",
+    [theme.breakpoints.down("md")]: {
+      fontSize: "1.4em",
+      fontWeight: 500,
+    },
   },
   tagesandtitles: {
     width: "100%",

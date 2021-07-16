@@ -29,11 +29,24 @@ const useStyles = makeStyles((theme) => ({
   },
   productContent: {
     textAlign: "left",
-    margin: "0 0 0 40px",
+    margin: "0 0 0 0px",
+    width: "50%",
     [theme.breakpoints.down("md")]: {
       textAlign: "center",
       margin: "0 0 0 0px",
+      width: "100%",
     },
+  },
+  gridImageItem: {
+    display: "flex",
+    justifyContent: "flex-end",
+    [theme.breakpoints.down("md")]: {
+      justifyContent: "center",
+    },
+  },
+
+  featuredProductGridImage: {
+    width: "40%",
   },
   featuredVolume: {
     color: "#4d4d4d",
@@ -41,6 +54,10 @@ const useStyles = makeStyles((theme) => ({
     textTransform: "uppercase",
     fontSize: "1.2em",
     fontWeight: 600,
+    [theme.breakpoints.down("md")]: {
+      fontSize: "1em",
+      fontWeight: 400,
+    },
   },
   featuredTitle: {
     color: "#000",
@@ -48,8 +65,12 @@ const useStyles = makeStyles((theme) => ({
     textTransform: "captilize",
     fontSize: "1.8em",
     fontWeight: 800,
+    [theme.breakpoints.down("md")]: {
+      fontSize: "1.4em",
+      fontWeight: 600,
+    },
   },
-  feaaturedDescription: {
+  featuredDescription: {
     letterSpacing: "0.08em",
     fontSize: "1.2em",
     fontWeight: 400,
@@ -57,6 +78,8 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down("md")]: {
       textAlign: "center",
       width: "100%",
+      fontSize: "1em",
+      fontWeight: 400,
     },
   },
 }));

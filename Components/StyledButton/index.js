@@ -17,6 +17,11 @@ const useStyles = makeStyles((theme) => ({
       backgroundColor: "black",
       color: "white",
     },
+    [theme.breakpoints.down("md")]: {
+      fontSize: "0.8em",
+      pading: "5px 10px",
+      width: "200px",
+    },
   },
 }));
 

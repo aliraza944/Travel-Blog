@@ -27,15 +27,19 @@ const useStyles = makeStyles((theme) => ({
     width: "30%",
     textAlign: "center",
     textTransform: "capitalize",
-    fontFamily: "Gordita",
-    fontSize: "1.5em",
-    letterSpacing: "1px",
+
     [theme.breakpoints.up("md")]: {
       display: "flex",
       justifyContent: "space-between",
       alignItems: "center",
     },
   },
+  Elements: {
+    fontSize: "1.4em",
+    letterSpacing: "1px",
+    fontWeight: 300,
+  },
+
   searchIcon: {
     display: "none",
 
