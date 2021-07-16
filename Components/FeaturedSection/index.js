@@ -1,5 +1,5 @@
 import Card from "../Card";
-
+import Link from "next/link";
 import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
 import useStyles from "./Styles";
@@ -11,6 +11,7 @@ function FeaturedSection({ data, type, buttonText }) {
   const nonherodata = data.filter(
     (obj) => obj.frontMatter.type === type && obj.frontMatter.isHero === false
   );
+
   const classes = useStyles();
   return (
     <>
@@ -26,13 +27,17 @@ function FeaturedSection({ data, type, buttonText }) {
                 xs={12}
                 md={type === "featured" ? 6 : 3}
               >
-                <Card
-                  sideTitle={data.frontMatter.sideTitle}
-                  imgsrc={data.frontMatter.thumbnailImage}
-                  bottomTitle={data.frontMatter.title}
-                  bottomTag={data.frontMatter.bottomTag}
-                  featured={type === "journal" && true}
-                />
+                <Link href={`/blog/${data.slug}`}>
+                  <a>
+                    <Card
+                      sideTitle={data.frontMatter.sideTitle}
+                      imgsrc={data.frontMatter.thumbnailImage}
+                      bottomTitle={data.frontMatter.title}
+                      bottomTag={data.frontMatter.bottomTag}
+                      featured={type === "journal" && true}
+                    />
+                  </a>
+                </Link>
               </Grid>
             );
           })}
@@ -49,13 +54,17 @@ function FeaturedSection({ data, type, buttonText }) {
                 xs={12}
                 md={type === "featured" ? 4 : 3}
               >
-                <Card
-                  sideTitle={data.frontMatter.sideTitle}
-                  imgsrc={data.frontMatter.thumbnailImage}
-                  bottomTitle={data.frontMatter.title}
-                  bottomTag={data.frontMatter.bottomTag}
-                  featured
-                />
+                <Link href={`/blog/${data.slug}`}>
+                  <a>
+                    <Card
+                      sideTitle={data.frontMatter.sideTitle}
+                      imgsrc={data.frontMatter.thumbnailImage}
+                      bottomTitle={data.frontMatter.title}
+                      bottomTag={data.frontMatter.bottomTag}
+                      featured
+                    />
+                  </a>
+                </Link>
               </Grid>
             );
           })}

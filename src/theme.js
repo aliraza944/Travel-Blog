@@ -22,6 +22,9 @@ const theme = createTheme({
         ".verticleText": {
           writingMode: "vertical-rl",
         },
+        a: {
+          textDecoration: "none",
+        },
       },
     },
   },

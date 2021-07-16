@@ -11,17 +11,24 @@ const Footer = () => {
   return (
     <div className={classes.root}>
       <Grid container alignItems="center" justifyContent="center" spacing={4}>
-        <Grid item xs={12} md={6} className={classes.joinUs}>
-          <Typography className={classes.footerText}>
-            Another Escape is an independent media company championing outdoor
-            lifestyle, environmental stewardship and regenerative living. We
-            encourage people to connect with the natural world in meaningful
-            ways so they may become active stewards of our planet.
-          </Typography>
+        <Grid item xs={12} md={6}>
+          <div className={classes.footerTextDiv}>
+            <Typography className={classes.footerText}>
+              Another Escape is an independent media company championing outdoor
+              lifestyle, environmental stewardship and regenerative living. We
+              encourage people to connect with the natural world in meaningful
+              ways so they may become active stewards of our planet.
+            </Typography>
+          </div>
         </Grid>
         <Grid item xs={12} md={6}>
           <div className={classes.joinUs}>
-            <Typography style={{ flexGrow: "0.1" }}>Join Us</Typography>
+            <Typography
+              className={classes.footerText}
+              style={{ flexGrow: "0.1" }}
+            >
+              Join Us
+            </Typography>
             <TextField
               className={classes.textField}
               id="email"
@@ -37,8 +44,8 @@ const Footer = () => {
           </div>
         </Grid>
       </Grid>
-      <div className={classes.joinUs}>
-        <Typography>All Rights Recieved</Typography>
+      <div className={classes.joinUs} style={{ marginTop: "100px" }}>
+        <Typography>All Rights Recieved &copy; 20201</Typography>
       </div>
     </div>
   );

@@ -6,10 +6,25 @@ const useStyles = makeStyles((theme) => ({
     width: "100%",
     padding: "40px 0 0 0",
   },
-  footerText: {
+  footerTextDiv: {
+    display: "flex",
+    justifyContent: "center",
+    flexDirection: "row",
+    alignItems: "center",
     width: "100%",
+    [theme.breakpoints.up("md")]: {
+      width: "60%",
+    },
+  },
+  footerText: {
+    textAlign: "center",
+    fontSize: "1em",
+    margin: "0 0 0 0px",
 
-    textalign: "center",
+    [theme.breakpoints.up("md")]: {
+      fontSize: "1.4em",
+      margin: "0 0 0 40px",
+    },
   },
   joinUs: {
     display: "flex",

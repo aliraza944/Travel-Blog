@@ -2,7 +2,6 @@ import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 import Shop from "../Components/Shop";
-import { Typography } from "@material-ui/core";
 
 import Header from "../Components/Header";
 import FeaturedSection from "../Components/FeaturedSection";
