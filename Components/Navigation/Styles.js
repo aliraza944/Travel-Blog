@@ -12,9 +12,8 @@ const useStyles = makeStyles((theme) => ({
   },
 
   appbar: {
-    display: "flex",
-    justifyContent: "space-between",
-    alignItems: "center",
+    backgroundColor: "white",
+    height: "100px",
   },
   drawer: {
     [theme.breakpoints.up("md")]: {
