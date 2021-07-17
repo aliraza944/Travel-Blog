@@ -2,10 +2,25 @@ import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 import marked from "marked";
+import useStyles from "./Styles";
+import Image from "next/image";
+import { Typography } from "@material-ui/core";
 const BlogPost = ({ frontmatter, slug, content }) => {
+  const classes = useStyles();
   return (
-    <div>
-      <h2>{frontmatter.title}</h2>
+    <div className={classes.root}>
+      <div className={classes.coverimagecontainer}></div>
+      <Image
+        layout="responsive"
+        width={500}
+        height={250}
+        src={`/${frontmatter.coverImage}`}
+      ></Image>
+      <div className={classes.blogcontent}>
+        <Typography variant="h1">{frontmatter.title}</Typography>
+
+        <div dangerouslySetInnerHTML={{ __html: marked(content) }}></div>
+      </div>
     </div>
   );
 };

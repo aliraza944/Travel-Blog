@@ -12,6 +12,8 @@ const useStyles = makeStyles((theme) => ({
   },
 
   appbar: {
+    display: "flex",
+    justifyContent: "center",
     backgroundColor: "white",
     height: "100px",
   },
@@ -73,9 +75,13 @@ const useStyles = makeStyles((theme) => ({
     fontFamily: "Playfair Display, serif;",
     textAlign: "center",
     fontSize: "2em",
+    color: "black",
     [theme.breakpoints.up("md")]: {
       fontSize: "3em",
       textAlign: "left",
+    },
+    "& > a": {
+      color: "black",
     },
   },
   drawer: {
