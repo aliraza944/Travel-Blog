@@ -2,26 +2,38 @@ import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 import Shop from "../Components/Shop";
-
+import { useState } from "react";
 import Header from "../Components/Header";
 import FeaturedSection from "../Components/FeaturedSection";
+import Navigation from "../Components/Navigation";
+import Footer from "../Components/Footer";
+import HomePage from "../Components/HomePage";
 export default function Home({ posts }) {
+  const [home, setHome] = useState(true);
   return (
     <div>
       <Header />
 
       <main>
-        <FeaturedSection
-          data={posts}
-          type="featured"
-          buttonText="featured stories"
-        />
-        <FeaturedSection
-          data={posts}
-          type="journal"
-          buttonText="journal articles"
-        />
-        <Shop />
+        {home ? (
+          <HomePage />
+        ) : (
+          <>
+            <Navigation />
+            <FeaturedSection
+              data={posts}
+              type="featured"
+              buttonText="featured stories"
+            />
+            <FeaturedSection
+              data={posts}
+              type="journal"
+              buttonText="journal articles"
+            />
+            <Shop />
+            <Footer />
+          </>
+        )}
       </main>
     </div>
   );
