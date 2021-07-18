@@ -8,8 +8,11 @@ import FeaturedSection from "../Components/FeaturedSection";
 import Navigation from "../Components/Navigation";
 import Footer from "../Components/Footer";
 import HomePage from "../Components/HomePage";
+import { useHomeState } from "../Context";
+
 export default function Home({ posts }) {
-  const [home, setHome] = useState(true);
+  const home = useHomeState();
+
   return (
     <div>
       <Header />
