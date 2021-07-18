@@ -13,7 +13,7 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
-    filter: "brightness(60%)",
+    filter: "brightness(50%)",
   },
   landingcontent: {
     width: "100%",
