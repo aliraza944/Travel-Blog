@@ -25,13 +25,12 @@ const useStyles = makeStyles((theme) => ({
   },
   navItems: {
     display: "none",
-    width: "30%",
     textAlign: "center",
     textTransform: "capitalize",
-
+    flexGrow: 1,
     [theme.breakpoints.up("md")]: {
       display: "flex",
-      justifyContent: "space-between",
+      justifyContent: "space-around",
       alignItems: "center",
     },
   },
