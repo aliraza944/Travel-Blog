@@ -7,10 +7,14 @@ import Image from "next/image";
 import { Typography } from "@material-ui/core";
 import Navigation from "../../Components/Navigation";
 import Footer from "../../Components/Footer";
+import Head from "next/head";
 const BlogPost = ({ frontmatter, slug, content }) => {
   const classes = useStyles();
   return (
     <>
+      <Head>
+        <title>{frontmatter.title}</title>
+      </Head>
       <Navigation />
       <div className={classes.root}>
         <div className={classes.coverimagecontainer}></div>
