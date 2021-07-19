@@ -43,9 +43,11 @@ const useStyles = makeStyles((theme) => ({
     textAlign: "center",
     fontSize: "1.2em",
     color: "white",
+    width: "100%",
     letterSpacing: "0.008em",
     [theme.breakpoints.up("md")]: {
       fontSize: "2em",
+      width: "40%",
     },
   },
   expandIcon: {
