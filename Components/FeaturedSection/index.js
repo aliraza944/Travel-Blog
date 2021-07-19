@@ -4,6 +4,8 @@ import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
 import useStyles from "./Styles";
 import Button from "../StyledButton";
+import { useSpring, animated, config } from "react-spring";
+
 function FeaturedSection({ data, type, buttonText }) {
   const herodata = data.filter(
     (obj) => obj.frontMatter.type === type && obj.frontMatter.isHero === true
@@ -11,11 +13,17 @@ function FeaturedSection({ data, type, buttonText }) {
   const nonherodata = data.filter(
     (obj) => obj.frontMatter.type === type && obj.frontMatter.isHero === false
   );
+  const fadeStyle = useSpring({
+    from: { y: 100, opacity: 0 },
+    to: { y: 0, opacity: 1 },
+    config: config.molasses,
+    delay: 600,
+  });
 
   const classes = useStyles();
   return (
     <>
-      <div className={classes.featuredContainer}>
+      <animated.div style={fadeStyle} className={classes.featuredContainer}>
         <Typography className={classes.featuredText}> {type}</Typography>
 
         <Grid container spacing={2}>
@@ -42,7 +50,7 @@ function FeaturedSection({ data, type, buttonText }) {
             );
           })}
         </Grid>
-      </div>
+      </animated.div>
       <div className={classes.secondGrid}>
         {" "}
         <Grid container spacing={2}>

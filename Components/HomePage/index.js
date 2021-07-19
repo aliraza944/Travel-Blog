@@ -8,10 +8,10 @@ import { useState, useEffect } from "react";
 const HomePage = () => {
   const [fade, setFade] = useState(false);
   const fadeStyle = useSpring({
-    from: { opacity: 0 },
-    to: { opacity: fade ? 0 : 1 },
-    config: config.gentle,
-    delay: 600,
+    from: { y: 100, opacity: 0 },
+    to: { y: 0, opacity: fade ? 0 : 1 },
+    config: config.slow,
+    delay: fade ? 200 : 600,
   });
   const classes = useStyles();
   const updateHome = useUpdateHomeState();
@@ -31,8 +31,8 @@ const HomePage = () => {
         <ExpandMoreIcon
           className={classes.expandIcon}
           onClick={() => {
-            updateHome(false);
             setFade(true);
+            setTimeout(() => updateHome(false), 700);
           }}
         />
       </animated.div>

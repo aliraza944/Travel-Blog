@@ -23,18 +23,20 @@ export default function Home({ posts }) {
         ) : (
           <>
             <Navigation />
-            <FeaturedSection
-              data={posts}
-              type="featured"
-              buttonText="featured stories"
-            />
-            <FeaturedSection
-              data={posts}
-              type="journal"
-              buttonText="journal articles"
-            />
-            <Shop />
-            <Footer />
+            <div>
+              <FeaturedSection
+                data={posts}
+                type="featured"
+                buttonText="featured stories"
+              />
+              <FeaturedSection
+                data={posts}
+                type="journal"
+                buttonText="journal articles"
+              />
+              <Shop />
+              <Footer />
+            </div>
           </>
         )}
       </main>
