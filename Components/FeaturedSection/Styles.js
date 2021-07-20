@@ -18,10 +18,12 @@ const useStyles = makeStyles((theme) => ({
     textAlign: "center",
     textTransform: "uppercase",
     letterSpacing: "0.08em",
+    fontSize: "1em",
     [theme.breakpoints.down("md")]: {
       writingMode: "horizontal-tb",
       width: "100%",
       margin: "0 0 2em 0em",
+      fontSize: "1.2em",
     },
   },
   secondGrid: {

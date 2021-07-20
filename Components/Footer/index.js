@@ -45,7 +45,7 @@ const Footer = () => {
         </Grid>
       </Grid>
       <div className={classes.joinUs} style={{ marginTop: "100px" }}>
-        <Typography>All Rights Recieved &copy; 20201</Typography>
+        <Typography>All Rights Recieved &copy; 2021</Typography>
       </div>
     </div>
   );

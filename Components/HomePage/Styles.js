@@ -23,7 +23,7 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: "column",
     alignItems: "center",
     position: "absolute",
-    top: "40%",
+    top: "25%",
   },
 
   title: {
@@ -46,7 +46,7 @@ const useStyles = makeStyles((theme) => ({
     width: "100%",
     letterSpacing: "0.008em",
     [theme.breakpoints.up("md")]: {
-      fontSize: "2em",
+      fontSize: "1.8em",
       width: "40%",
     },
   },

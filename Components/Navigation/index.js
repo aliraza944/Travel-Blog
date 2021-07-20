@@ -67,7 +67,7 @@ function Navigation(props) {
       <div className={classes.root}>
         <HideOnScroll {...props}>
           <AppBar color="transparent" elevation={0} className={classes.appbar}>
-            <Toolbar>
+            <Toolbar style={{ width: "100%" }}>
               {" "}
               <IconButton
                 color="inherit"

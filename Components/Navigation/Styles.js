@@ -15,7 +15,7 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     justifyContent: "center",
     backgroundColor: "white",
-    height: "100px",
+    height: "80px",
   },
   drawer: {
     [theme.breakpoints.up("md")]: {
@@ -35,7 +35,7 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   Elements: {
-    fontSize: "1.4em",
+    fontSize: "1.2em",
     letterSpacing: "1px",
     fontWeight: 300,
   },
@@ -76,7 +76,7 @@ const useStyles = makeStyles((theme) => ({
     fontSize: "2em",
     color: "black",
     [theme.breakpoints.up("md")]: {
-      fontSize: "3em",
+      fontSize: "2.5em",
       textAlign: "left",
     },
     "& > a": {

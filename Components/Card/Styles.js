@@ -50,6 +50,7 @@ const useStyles = makeStyles((theme) => ({
       writingMode: "vertical-rl",
       textAlign: "center",
       width: "fit-content",
+      fontSize: "0.8em",
     },
   },
   bottomTag: {
@@ -59,10 +60,10 @@ const useStyles = makeStyles((theme) => ({
     margin: "20px 0",
   },
   bottomTitle: {
-    fontSize: "1.8em",
+    fontSize: "1.6em",
     textTransform: "capitalize",
     color: "#000",
-    fontWeight: 500,
+    fontWeight: 400,
     margin: "0 0 50px 0",
     [theme.breakpoints.down("md")]: {
       fontSize: "1.4em",
